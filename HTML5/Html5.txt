@@ -1,0 +1,184 @@
+The instructors repo has been forked in GitHub...use it
+
+HTML 5 features
+----------------
+1) Data Storage
+		Local Storage
+		Session Storage
+		Indexed DB
+2) Offline application Cache
+3) Web Workers
+4) Real Time UPdates
+		Server sent events
+		Web sockets
+5) New Structural elements
+6) Filesystem API
+7) Mobile support
+		New input types
+		New forms Apz
+		Geo locations apps
+8) media support
+		Audio
+		Video
+9) Misc
+		Drag&Drop
+		History apps	
+		Non textual da atendering -> Canvas and SVG
+	
+		
+http://www.html5rocks.com/en/
+
+
+
+
+http://bit.ly/cisco-html5-repo
+COnfigure github and fork it
+
+Git: Prameela/
+Prameela45!@#   Shift123
+Initialized empty Git repository in c:/Users/pramkris/Hello-World/.git/
+
+
+
+******************************************************
+
+For all custom attributes -> prefix with "data-"
+
+
+Storage:
+window.localStorage
+		-Hashtable with key and vaue(both strings)
+		-Stored in some unknown location and encrypted
+		-USes same site origin policy like cookies. So if a page requests local storage data, browser returns data only stored by it. Store susing domain
+		- APIs
+			setItem(key,value)
+			getItem(key)
+			removeItem(key)
+			clear
+			key
+			length
+			window.storage -> event for trackign changes on localStorage -> accessible over HTTP
+window.sessionStorage
+		Same as localSTorage except data not shared across tabs/windows. One per browser session
+
+		
+indexedDB --> another storage mechanism......not yet stable i guess (????)
+
+window.applicationCache object
+
+Uses: Store country list that used in multiple pages here.
+Its safe because of same origin policy...not everyone can see the data
+
+*********************
+Web wrokers -> thread
+<progress> tag for reporting progress	
+
+http://modernizr.com/
+modernizr -> library consisting of many functions to detect presence of HTML5
+exposes an object called Modernizr
+Modernizr.localStorage == true -> if localStorage supported by browser	
+
+https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills
+So if html5 feature not supported use above ployfill, not commercial...hence no gurantee
+
+yepnope.js to load a polyfill instead of html5 feature
+
+Modernizr.load is a wrapper on this yepnope.
+e.g.
+Modernizr.load({
+  test: Modernizr.geolocation,
+  yep : 'geo.js',
+  nope: 'geo-polyfill.js'
+});
+http://modernizr.com/docs/
+	
+	
+http://html5boilerplate.com/
+
+html5test.com -> to check for  browser support	
+
+boilerplate & modernizr contributor Paul irish has some good youtube videos
+Paul Irish has some good videos for chrome developer tools
+
+http://addyosmani.com/blog/javascript-mvc-jungle/
+http://todomvc.com/
+
+
+
+<html manifest="location of manifest file">
+manifest needs a mime type of text/cache-manifest
+
+
+*************************
+websockets:
+LongPolling, Frequent pOLLING
+
+SPDY:is an open networking protocol developed primarily at Google for transporting web content
+var con = new WebSocket("ws://localhost:9090/SocketServer");
+con.addEvenetlistener();
+//Server should also have a listener that allows working with WebSockets
+
+
+
+************************
+Geo Locations
+
+New i/p types
+search,tel,url,color,range,number,date,etc.
+
+formats for video....join youtube/html5 and see flash videos converted to HTML5
+
+
+canvas -> bitmap based infrastructure...non textual
+data is merged...that is flat. Like ms paint...draw a square with a circle.....you cannot separate out the square and circle....
+kineticjs is built on top of canvas
+
+you can separate it out in svg like in ppt 
+
+
+
+DO: diff between bitmap and vector
+bitmap: each pixel color stord
+SVG -> 
+SVg library -> Raphael.js
+
+************************************
+
+CSS3
+
+prev CSS selectors : *,class,#id,element
+
+
+Xpath expressions part of CSS3 selectors
+e.g. all anchors that end with doc should have a particular background image 
+a[href$='doc']:{
+	background image :
+}
+
+
+
+#divLogo{
+	height: 10px;
+	:
+	:
+	:
+	border-radius: 30px;
+	background:linear-gradient(red 0%, white 100%);
+	box-shadow:
+}
+
+
+pseudo-selectors
+#divLogo:hover{
+	-webkit-transform: rotate(45deg); //custom support for chrome
+	-moz-transform:rotate(45deg);
+	transform:rotate(45deg);//for future standard implemnettaions
+	
+}
+
+webkit,moz,o,ms -> prefix to 
+
+
+
+tkmagesh77@gmail.com / 9901911221
+
